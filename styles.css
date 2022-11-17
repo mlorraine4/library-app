@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Sono";
+  src: url("Sono-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Sono";
+}
+
+button, input {
+  font-family: "Sono";
+}
+
+input {
+outline: none;
+}
+
+
+#library {
+  width: 90vw;
+  height: auto;
+  display: grid;
+  grid-auto-rows: 260px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 10px;
+  position: relative;
+  padding:20px;
+  background-color: #151B34
+}
+
+#background-img {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  opacity: 80%;
+}
+
+.containerMain {
+  background-color: #151B34;
+  position: absolute;
+  top: 120px;
+  width: 100vw;
+  height: 120vh;
+
+}
+
+.titleLibrary {
+  position: absolute;
+  font-size: 36px;
+  font-weight: bold;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.book {
+  border-radius: 8px;
+  border: 2px solid black;
+  text-align: center;
+  background: linear-gradient(to left,  #ffeecc 85%, #023020 75%);
+  position: relative;
+  box-shadow: 5px 5px black;
+}
+
+.title, .author, .pages, .releaseDate {
+  margin-left: 30px;
+}
+
+#openBtn {
+ background-color: #294540;
+ color: white;
+ padding: 10px;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ opacity: 0.8;
+ position: fixed;
+ bottom: 23px;
+ right: 28px;
+ width: 100px;
+ transition: 0.4s;
+ box-shadow: 5px 5px black;
+}
+
+#openBtn:hover {
+  font-size: 16px;
+}
+
+.formPopUp {
+ display: none;
+ position: fixed;
+ height: 400px;
+ width: 200px;
+ right: 0;
+ top: 40px;
+ border: 3px solid #f1f1f1;
+ border-radius: 8px;
+ padding: 10px;
+ background-color: rgb(232, 150, 17, 0.6);
+ text-align: center;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 5px;
+}
+
+#submit {
+  grid-column: 1/2;
+  background-color: rgba(185, 230, 98, 0.6);
+  border: none;
+  border-radius: 8px;
+}
+
+#cancelBtn {
+  grid-column: 2/3;
+  background-color: rgba(255, 0, 0, 0.6);
+  border: none;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  grid-column: 1/3;
+}
+
+.bookTitle {
+  font-weight: bold;
+  grid-column: 1/3;
+}
+
+.remove {
+  display: none;
+  font-size: 10px;
+  border-radius: 8px;
+  border: none;
+  padding: 5px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.formBtn:hover, .remove:hover {
+  outline: 2px solid white;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+.author {
+  font-style: italic;
+}
+
+.pages, .releaseDate {
+  font-size: 10px;
+}
+
+.read {
+  position: absolute;
+  margin-bottom: 5px;
+  font-size: 12px;
+  left: 35px;
+  bottom: 5px;
+}
+
+.readToggle {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  margin-top: 17px;
+}
+
+.readToggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 8px;
+}
+
+.readToggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 8px;
+  text-align: center;
+}
+
+input:checked + .slider {
+  background-color: #95bb72;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #95bb72;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.readToggleBook {
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  bottom: 5px;
+  left: 92px;
+}
+
+.readToggleBook input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.readToggleBook .slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.credit {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <img src="images\trnava-university-BEEyeib-am8-unsplash.jpg" id="background-img" alt="">
+    <p class="titleLibrary">my library</p>
+
+  <div class="containerMain">
+      <div id="library">
+      <div class="book">
+        <p class="title">Harry Potter #1</p>
+        <p class="author">J.K. Rowling</p>
+        <p class="pages">223 pages</p>
+        <p class="releaseDate">published: June 26, 1997</p>
+        <p class="read">finished:</p>
+        <label class="readToggleBook">
+          <input type="checkbox" id="readInput">
+          <span class="slider"></span>
+        </label>
+
+        <button type="button" name="remove" class="remove">remove</button>
+      </div>
+    </div>
+
+    <button type="button" id="openBtn" onclick="openForm()" name="button">New Book</button>
+
+    <div class="formPopUp" id="container">
+      <form id="form" action="index.html" method="post">
+        <p class="bookTitle">new book</p>
+        <input type="text" name="title" placeholder="title" value="">
+
+        <input type="text" name="author" placeholder="author" value="">
+
+        <input type="text" name="pages" placeholder="number of pages"value="">
+
+        <input type="text" name="releaseDate" placeholder="publish date" value="">
+
+        <p class="alreadyRead">already read?</p>
+        <label class="readToggle">
+          <input type="checkbox" name="read" id="readInput">
+          <span class="slider"></span>
+        </label>
+
+        <button type="submit" class="formBtn" name="button" id="submit">add book</button>
+        <button type="button" class="formBtn" onclick="closeForm()" id="cancelBtn" name="button">cancel</button>
+      </form>
+    </div>
+  </div>
+  <div class="credit">
+    Photo by <a href="https://unsplash.com/@trnavskauni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Trnava University</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </div>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
